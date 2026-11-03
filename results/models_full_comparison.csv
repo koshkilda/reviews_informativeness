@@ -1,0 +1,28 @@
+model_name,r2_train,r2_test,mae_train,mae_test,rmse_train,rmse_test,training_time,params,position
+char_gb,0.9163872815536759,0.8686129717554151,0.07283015201423151,0.08773824605221453,0.10064920453369927,0.12504626219222484,0,"{'char_tfidf': TfidfVectorizer(analyzer='char', max_features=10000, min_df=3,
+                ngram_range=(3, 5)), 'regressor': GradientBoostingRegressor(learning_rate=0.05, max_depth=6, min_samples_leaf=2,
+                          n_estimators=200, n_iter_no_change=10,
+                          random_state=42, subsample=0.9)}",1
+hashing_gb,0.8455543210162255,0.8020882706407702,0.10624081447680254,0.11848847295190512,0.13679242739121533,0.1534723830058391,0,"{'hashing': HashingVectorizer(alternate_sign=False, n_features=262144,
+                  token_pattern='(?u)\\b\\w{3,}\\b'), 'regressor': GradientBoostingRegressor(learning_rate=0.05, max_depth=6, min_samples_leaf=2,
+                          n_estimators=200, n_iter_no_change=10,
+                          random_state=42, subsample=0.9)}",2
+catboost,0.8256082357551381,0.801648306327732,0.11180901850046487,0.11794937514764947,0.14535740486010149,0.15364287539483323,0,"{'tfidf': TfidfVectorizer(max_df=0.9, max_features=5000, min_df=3, ngram_range=(1, 2),
+                token_pattern='(?u)\\b[а-яёa-z0-9]+\\b'), 'regressor': CatBoostEstimator(iterations=300, depth=6, learning_rate=0.05)}",3
+tfidf_gb,0.8431483417776773,0.800717133990761,0.10702378446080868,0.11875983774555983,0.1378537968650814,0.1540030953547386,0,"{'tfidf': TfidfVectorizer(max_df=0.95, max_features=8000, min_df=2, ngram_range=(1, 3),
+                token_pattern='(?u)\\b[а-яёa-z0-9]+\\b'), 'regressor': GradientBoostingRegressor(learning_rate=0.05, max_depth=6, min_samples_leaf=2,
+                          n_estimators=200, n_iter_no_change=10,
+                          random_state=42, subsample=0.9)}",4
+lemma_gb,0.823096389118954,0.7738751202829628,0.11224692735612234,0.12395420963180524,0.1464004878330053,0.1640471327701485,0,"{'lemmatizer': LemmaVectorizer(), 'regressor': GradientBoostingRegressor(learning_rate=0.05, max_depth=6, min_samples_leaf=2,
+                          n_estimators=200, n_iter_no_change=10,
+                          random_state=42, subsample=0.9)}",5
+hashing_ridge,0.843331703056092,0.7307366707210172,0.10572338103964733,0.13643083926540547,0.13777319701576962,0.17901238360433208,0,"{'hashing': HashingVectorizer(alternate_sign=False, n_features=262144,
+                  token_pattern='(?u)\\b\\w{3,}\\b'), 'regressor': Ridge(max_iter=1000, random_state=42)}",6
+lstm,0.9013821898876717,0.7298639116172125,0.07072760077343196,0.11937689662046976,0.10930797587677811,0.1793022639463505,7800,"LSTM: vocab_size=20000, max_len=200",7
+tfidf_ridge,0.8280126916001904,0.7192648526462834,0.1111692478563759,0.13894830431889033,0.14435185692897265,0.18278597263839227,0,"{'tfidf': TfidfVectorizer(max_df=0.95, max_features=8000, min_df=2, ngram_range=(1, 3),
+                token_pattern='(?u)\\b[а-яёa-z0-9]+\\b'), 'regressor': Ridge(max_iter=1000, random_state=42)}",8
+tfidf_svr,0.9151523311733706,0.7129810313377123,0.09172704174310996,0.14947527442396416,0.10138976871965066,0.1848203419838468,0,"{'tfidf': TfidfVectorizer(max_df=0.95, max_features=8000, min_df=2, ngram_range=(1, 3),
+                token_pattern='(?u)\\b[а-яёa-z0-9]+\\b'), 'regressor': SVR(max_iter=5000)}",9
+tfidf_rf,0.4281252285060323,0.40667166262155363,0.22472151410976857,0.22620500520612424,0.26322349060002825,0.26573087348540186,0,"{'tfidf': TfidfVectorizer(max_df=0.95, max_features=8000, min_df=2, ngram_range=(1, 3),
+                token_pattern='(?u)\\b[а-яёa-z0-9]+\\b'), 'regressor': RandomForestRegressor(max_depth=12, max_features='sqrt', min_samples_leaf=3,
+                      n_estimators=150, n_jobs=-1, random_state=42)}",10
