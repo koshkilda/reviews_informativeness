@@ -1,2 +1,12 @@
-informativeness.csv
+# Данные (>300 МБ, не помещаются в GitHub)
 data.csv
+informativeness.csv
+
+# Артефакты обучения CatBoost
+catboost_info/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/

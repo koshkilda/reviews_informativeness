@@ -1,0 +1,11 @@
+pandas
+numpy
+scikit-learn==1.8.0
+catboost
+tensorflow
+nltk
+seaborn
+matplotlib
+joblib
+openpyxl
+jupyter
